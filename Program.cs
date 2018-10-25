@@ -10,6 +10,7 @@ namespace Lab10Practice
     {
         static void Main(string[] args)
         {
+            int numberOfCircles = 0;
             while (true)
             {
                 try
@@ -30,13 +31,14 @@ namespace Lab10Practice
 
                 Console.WriteLine("Would you like to keep going? (y/n)");
                 string userContinue = Console.ReadLine().ToLower();
+                numberOfCircles++;
                 if (userContinue == "y" || userContinue == "Y")
                 {
                     continue;
                 }
                 else if (userContinue == "n" || userContinue == "N")
                 {
-                    Console.WriteLine("Goodbye. You have created circle objects");
+                    Console.WriteLine("Goodbye. You have created {0} circle objects", + numberOfCircles);
                     Console.ReadKey();
                     break;
                 }
